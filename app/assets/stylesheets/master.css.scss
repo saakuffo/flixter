@@ -1,3 +1,4 @@
+/* Base Tag Classes */
 h1, h2, h3, h4, h5, h6, .navbar {
   margin:0;
 }
@@ -6,6 +7,9 @@ body {
   background: url('bg.png');
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
+
+
+/* Bootstrap Edits */
 
 .navbar {
   border-radius:0;
@@ -20,6 +24,12 @@ body {
   font-weight: 100;
   color:white;
 }
+
+.btn {
+  border-radius: 0;
+}
+
+/* Custom Classes */
 
 .hero {
   background: url('hero.jpg') no-repeat center center fixed;
@@ -47,6 +57,16 @@ body {
   text-shadow: rgba(0,0,0,0.95) 1px 1px;
 }
 
-.btn {
-  border-radius: 0;
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 10px;
+}
+
+.booyah-box h2, .booyah-box h1 {
+  margin: 10px;
 }
