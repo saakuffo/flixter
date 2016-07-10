@@ -48,6 +48,9 @@ gem "fog"
 # Figaro for secret key utilization
 gem 'figaro'
 
+# Image Magic/Mini-magic gem
+gem 'mini_magick', '~> 4.3.1'
+
 
 
 # Use ActiveModel has_secure_password
