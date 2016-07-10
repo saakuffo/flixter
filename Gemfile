@@ -39,6 +39,17 @@ gem 'devise'
 # Simple Forms
 gem 'simple_form'
 
+# Carrier wave - image uploading
+gem 'carrierwave'
+
+# Fog. Allow Carrier wave to interactive with S3
+gem "fog"
+
+# Figaro for secret key utilization
+gem 'figaro'
+
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

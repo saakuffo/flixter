@@ -14,3 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/sensitive
+
+# Ignore application configuration
+/config/application.yml
