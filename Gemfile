@@ -39,8 +39,11 @@ gem 'devise'
 # Simple Forms
 gem 'simple_form'
 
-# Carrier wave - image uploading
+# Carrier wave - image/video uploading
 gem 'carrierwave'
+
+# Carrier wave for AWS
+gem 'carrierwave-aws'
 
 # Fog. Allow Carrier wave to interactive with S3
 gem "fog"
