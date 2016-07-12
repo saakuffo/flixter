@@ -54,7 +54,8 @@ gem 'figaro'
 # Image Magic/Mini-magic gem
 gem 'mini_magick', '~> 4.3.1'
 
-
+# Stripe
+gem 'stripe'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
