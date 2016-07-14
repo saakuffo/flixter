@@ -8,25 +8,21 @@
     <%= link_to 'Add a new sections...', new_instructor_course_section_path(current_course), class: 'btn btn-primary btn-lg' %>
   </div>
   <ul>
-    <% if current_course.try(:sections) %>
-      <% current_course.sections.reverse.each do |section| %>
-        <li>
-          <%= section.title %>
-          <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'pull-right btn btn-primary btn-xs' %>
-          <ul>
-          <% if section.try(:lessons) %>
-            <% section.lessons.reverse.each do |lesson| %>
-              <li>
-                <b><%= lesson.title %></b>
-                -
+    <% current_course.sections.each do |section| %>
+      <li>
+        <%= section.title %>
+        <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'pull-right btn btn-primary btn-xs' %>
+        <ul>
+          <% section.lessons.rank(:row_order).each do |lesson| %>
+            <li>
+              <b><%= lesson.title %></b>
+              -
                 <%= lesson.subtitle %>
-              </li>
-            <% end %>
-            <% end %>
-          </ul>
-          <br clear="clr">
-        </li>
-      <% end %>
+            </li>
+          <% end %>
+        </ul>
+        <br clear="clr">
+      </li>
     <% end %>
   </ul>
 </div>

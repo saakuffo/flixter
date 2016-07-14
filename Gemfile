@@ -57,6 +57,11 @@ gem 'mini_magick', '~> 4.3.1'
 # Stripe
 gem 'stripe'
 
+# Ranked-model
+gem 'ranked-model'
+
+gem 'hirb'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
