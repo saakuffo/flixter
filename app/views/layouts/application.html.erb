@@ -33,32 +33,68 @@
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to 'Dashboard', dashboard_path %>/li>
               <% if user_signed_in? %>
-                <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-              <% else %>
-                <li><%= link_to 'Sign In', new_user_session_path %></li>
-                <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-              <% end %>
-            </ul>
+                  <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+                <% else %>
+                  <li><%= link_to 'Sign In', new_user_session_path %></li>
+                  <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+                <% end %>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
           </div>
-          <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-      </nav>
-      <% if notice.present? %>
-        <p class="alert alert-info"><%= notice %></p>
-      <% end %>
-      <% if alert.present? %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
-      <%= yield %>
-    </div>
-    <br class="clr" />
-    <div id="footer">
-      <div class="container">
-        <b>Footer Here</b>
-        <br />
-        <%= link_to 'Teach a Course', new_instructor_course_path %>
+          <!-- /.container-fluid -->
+        </nav>
+        <% if notice.present? %>
+          <p class="alert alert-info"><%= notice %></p>
+        <% end %>
+        <% if alert.present? %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+        <%= yield %>
       </div>
-    </div>
-  </body>
-</html>
+      <br class="clr" />
+      <div id="footer">
+        <div class="container">
+          <div class="col-xs-12 col-sm-3">
+            <b>Teachers</b>
+            <br />
+            <%= link_to 'Teach a Course', new_instructor_course_path %>
+            <br />
+            <%= link_to 'My Dashboard', dashboard_path %>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <b>About</b>
+            <br>
+            <%= link_to 'Team', '#' %>
+            <br>
+            <%= link_to 'Carrers', '#' %>
+            <br>
+            <%= link_to 'Privacy Policy', '#' %>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <b>Contact</b>
+            <br>
+            stephen_akuffo@testemail.com
+            <br>
+            1 Dundas St E
+            <br>
+            Toronto, ON M5B 2R8
+          </div>
+          <div class="col-xs-12 col-sm-3 social">
+            <b>Social</b>
+            <br>
+            <br>
+            <%= link_to 'https://github.com/saakuffo' do %>
+              <%= image_tag 'github.png', class: 'social-button' %>
+            <% end %>
+            <%= link_to 'https://ca.linkedin.com/in/stephen-akuffo-28729719' do %>
+              <%= image_tag 'linkedin.png', class: 'social-button' %>
+            <% end %>
+            <%= link_to 'https://twitter.com/sly_sancti' do %>
+              <%= image_tag 'twitter.png', class: 'social-button' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </body>
+  </html>
