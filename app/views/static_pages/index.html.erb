@@ -2,28 +2,40 @@
   <br />
   <div class="frosty col-xs-10 col-xs-offset-1 text-center">
     <br />
-    <h1>Learning Magic from the Pros</h1>
+    <h1>Welcome to the Flixter Learning Community</h1>
+    <h2>Keep Learning. Keep Growing.</h2>
     <br />
-    <h2>I'm an illusionist, Michael</h2>
+    <%= link_to 'Browse Courses', courses_path, class: 'btn btn-success' %>
     <br />
-    <%= link_to 'Learn More', courses_path, class: 'btn btn-success' %>
-    <br /><br />
+    <br />
   </div>
 </div>
-
 <br />
-
 <div class="col-xs-10 col-xs-offset-1 features text-center">
-  <div class="col-sm-4">
-    <h3>Feature 1</h3>
+  <div class="container frosty col-xs-10 col-xs-offset-1 text-center">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="icon">
+          <%= image_tag 'home-learn.png' %>
+        </div>
+        <h3>Learn from Anywhere</h3>
+        <p>Be it from your phone, tablet or PC, get access to a library of videos created by the community.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="icon">
+          <%= image_tag 'TV.png' %>
+        </div>
+        <h3>Teach from Anywhere</h3>
+        <p>Worry only about the quality of the content you want to share with the world. We offer simple course creation, video uploading and course management</p>
+      </div>
+      <div class="col-md-4">
+        <div class="icon">
+          <%= image_tag 'freemium.png' %>
+        </div>
+        <h3>Free and Premium Course Support</h3>
+        <p>To allow the best content creation possible, we support both those who teach and share theirs skills free and those who want invest financially in the marketplace.</p>
+      </div>
+    </div>
   </div>
-
-  <div class="col-sm-4">
-    <h3>Feature 2</h3>
-  </div>
-
-  <div class="col-sm-4">
-    <h3>Feature 3</h3>
-  </div>
-
 </div>
+<br class="clr">
