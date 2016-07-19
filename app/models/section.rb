@@ -2,6 +2,10 @@ class Section < ActiveRecord::Base
   belongs_to :course
   has_many :lessons, dependent: :destroy
 
+
+  validates :title, presence: true
+
+  
   include RankedModel
   ranks :row_order, :with_same => :course_id
 
@@ -16,4 +20,5 @@ class Section < ActiveRecord::Base
 
     return section
   end
+
 end
