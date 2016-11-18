@@ -35,7 +35,7 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
 
 # Devise
-gem 'devise'
+gem 'devise', '4.2.0'
 
 # Simple Forms
 gem 'simple_form'
@@ -63,6 +63,16 @@ gem 'ranked-model'
 
 gem 'hirb'
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+  gem 'factory_girl_rails', '~> 4.5'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'byebug'
+  gem 'rubocop'
+  gem 'simplecov', require: false
+  gem 'codecov', require: false, group: :test
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
